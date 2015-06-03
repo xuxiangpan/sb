@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--接口路径配置 -->
+<mapper namespace="com.self.user.dao.UserDao1">
+
+	<select id="selectAllUserInfo" parameterType="UserInfo1"
+		resultType="UserInfo1">
+		SELECT * FROM UserInfo1  where user_id=#{user_id}
+	</select>
+	<insert id="addUserInfo1" >
+	    
+	INSERT INTO UserInfo1( 
+		user_id,
+		user_name
+	) VALUES ( 
+		#{user_id,jdbcType=BIGINT},
+		#{user_name,jdbcType=VARCHAR}
+	)
+	</insert>
+</mapper>
