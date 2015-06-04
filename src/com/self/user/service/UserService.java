@@ -6,7 +6,7 @@ import com.self.user.pojo.UserInfo;
 import com.self.util.Pager;
 
 public interface UserService {
-	List<UserInfo> selectUserInfo(UserInfo userInfo); 
+	UserInfo selectUserInfo(UserInfo userInfo); 
 	List<UserInfo> selectAllUserInfo(UserInfo userInfo); 
 
 }

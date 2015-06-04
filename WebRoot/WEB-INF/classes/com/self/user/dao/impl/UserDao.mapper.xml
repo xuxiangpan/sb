@@ -5,7 +5,7 @@
 
 	<select id="selectUserInfo" parameterType="UserInfo"
 		resultType="UserInfo">
-		SELECT * FROM UserInfo  where user_id=#{user_id}
+		SELECT * FROM UserInfo  where user_name=#{user_name} and password=#{password}
 	</select>
 	<select id="selectAllUserInfo" parameterType="UserInfo"
 		resultType="UserInfo">

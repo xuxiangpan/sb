@@ -23,6 +23,12 @@
 					<li><a href="#contact">Contact</a></li>
 				</ul>
 				
+				<ul class="nav navbar-nav navbar-right">
+				
+					<li><a href="#">当前用户：${userInfo.user_name}</a></li>
+					 <li><a href="logout">退出</a></li>
+					
+				</ul>
 				
 				<jsp:include page="userLeft.jsp">
 					<jsp:param value="top" name="tag"/>

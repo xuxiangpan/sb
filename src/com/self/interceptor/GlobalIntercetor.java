@@ -14,9 +14,9 @@ public class GlobalIntercetor implements HandlerInterceptor {
 		
 		// TODO Auto-generated method stub
 		
-		System.out.println(request.getHeader("Referer"));
-		System.out.println(request.getRequestURI());
-		System.out.println(request.getRequestURL());
+//		System.out.println(request.getHeader("Referer"));
+//		System.out.println(request.getRequestURI());
+//		System.out.println(request.getRequestURL());
 		String contextRelativeUrl = request.getRequestURI();
 		request.setAttribute("contextRelativeUrl",contextRelativeUrl.substring(contextRelativeUrl.lastIndexOf("/")+1));
 		return true;

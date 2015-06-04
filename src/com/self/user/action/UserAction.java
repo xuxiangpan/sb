@@ -3,18 +3,18 @@ package com.self.user.action;
 import java.util.List;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.ModelAndView;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.self.user.pojo.UserInfo;
 import com.self.user.service.UserService;
-import com.self.util.Pager;
 
 @Controller("userAction")
 public class UserAction {
@@ -47,7 +47,7 @@ public class UserAction {
 
 		UserInfo info = new UserInfo();
 
-		PageHelper.startPage(null == pageNum ? 1 : pageNum, 2);
+		PageHelper.startPage(null == pageNum ? 1 : pageNum, 3);
 		List<UserInfo> list = userService.selectAllUserInfo(info);
 
 		PageInfo<UserInfo> page = new PageInfo<UserInfo>(list);
@@ -60,7 +60,7 @@ public class UserAction {
 		
 		UserInfo info = new UserInfo();
 		
-		PageHelper.startPage(null == pageNum ? 1 : pageNum, 2);
+		PageHelper.startPage(null == pageNum ? 1 : pageNum, 3);
 		List<UserInfo> list = userService.selectAllUserInfo(info);
 		
 		PageInfo<UserInfo> page = new PageInfo<UserInfo>(list);
@@ -73,7 +73,7 @@ public class UserAction {
 		
 		UserInfo info = new UserInfo();
 		
-		PageHelper.startPage(null == pageNum ? 1 : pageNum, 2);
+		PageHelper.startPage(null == pageNum ? 1 : pageNum, 3);
 		List<UserInfo> list = userService.selectAllUserInfo(info);
 		
 		PageInfo<UserInfo> page = new PageInfo<UserInfo>(list);
@@ -99,9 +99,24 @@ public class UserAction {
 		return "forward:/jsp/index.html";
 	}
 
-	@RequestMapping("/login")
-	public String login() {
+	@RequestMapping("/index")
+	public String index() {
 		return "forward:/page/login.html";
+	}
+	@RequestMapping(value="/login",method=RequestMethod.POST)
+	public String login(UserInfo userInfo,HttpSession session) {
+		session.setAttribute("userInfo", userInfo);
+		
+		UserInfo resultUserInfo = userService.selectUserInfo(userInfo);
+		System.out.println("²éÑ¯½á¹û£º"+resultUserInfo);
+		return "redirect:/userInfoList";
+	}
+	@RequestMapping(value="/logout")
+	public String logout(HttpSession session) {
+		session.removeAttribute("userInfo");
+		session.invalidate();
+		
+		return "redirect:/index";
 	}
 
 }

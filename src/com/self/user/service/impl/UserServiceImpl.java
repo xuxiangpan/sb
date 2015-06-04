@@ -24,7 +24,7 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public List<UserInfo> selectUserInfo(UserInfo userInfo) {
+	public UserInfo selectUserInfo(UserInfo userInfo) {
 		return userDao.selectUserInfo(userInfo);
 	}
 

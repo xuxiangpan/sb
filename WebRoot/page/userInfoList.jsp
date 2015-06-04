@@ -6,8 +6,9 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Insert title here</title>
+<title>用户中心</title>
 <link rel="stylesheet" href="resources/bootstrap-3.3.4-dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="resources/font-awesome-4.3.0/css/font-awesome.css">
 
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -18,6 +19,11 @@
 <link rel="stylesheet" href="page/css/userInfoList.css">
 
 <style type="text/css">
+body{
+	white-space: normal;
+    word-wrap: break-word;
+    word-break: break-all;
+}
 @media ( max-width : 767px) {
 	#top_accordion {
 		display: block;
@@ -68,7 +74,7 @@
 				</jsp:include>
 			</div>
 
-			<div class="col-sm-9 ">
+			<div class="col-sm-9">
 					<ol class="breadcrumb">
 					  <li><a href="#">Home</a></li>
 					  <li><a href="#">Library</a></li>
@@ -94,14 +100,11 @@
 									<td>${userInfo.user_id }</td>
 									<td>${userInfo.user_name }</td>
 								</tr>
-														
 							</c:forEach>
-					
-						
 						</tbody>
 					</table>
-					
 					 <div class="panel-footer">
+					 	Maecenasnecodioetantetincidunttempus.Donecvitaesapienutliberovenenatisfaucibus.Nullamquisante.Etiamsitametorciegeterosfaucibustincidunt.Duisleo.Sedfringillamaurissitametnibh.Namquamnunc,blanditvel,luctuspulvinar,hendreritid,lorem.
 					</div>
 					
 				</div>

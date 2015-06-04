@@ -8,6 +8,6 @@ import com.self.util.Pager;
 public interface UserDao {
 	
 	List<UserInfo> selectAllUserInfo(UserInfo userInfo);
-	List<UserInfo> selectUserInfo(UserInfo userInfo);
+	UserInfo selectUserInfo(UserInfo userInfo);
 
 }

@@ -5,18 +5,18 @@
     <div class="panel-heading" role="tab" id="${param.tag}_headingOne">
       <h4 class="panel-title">
         <a data-toggle="collapse" data-parent="#${param.tag}_accordion" href="#${param.tag}_collapseOne" aria-expanded="true" aria-controls="collapseOne" class="a_block">
-          菜单1
+          <i class="fa fa-home fa-fw"></i>&nbsp;  菜单1
         </a>
       </h4>
     </div>
     <div id="${param.tag}_collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
       <div class="panel-body <c:if test="${contextRelativeUrl =='userInfoList'}">a_checked</c:if>">
-        <a href="userInfoList?pageNum=1">${contextRelativeUrl}第一页</a> 
+        <a href="userInfoList?pageNum=1"><i class="fa fa-user fa-fw"></i>第一页</a> 
       </div>
-      <div class="panel-body" <c:if test="${contextRelativeUrl =='userInfoList1'}">a_checked</c:if>>
+      <div class="panel-body <c:if test="${contextRelativeUrl =='userInfoList1'}">a_checked</c:if>">
         <a href="userInfoList1?pageNum=1">第二页</a> 
       </div>
-      <div class="panel-body" <c:if test="${contextRelativeUrl =='userInfoList2'}">a_checked</c:if>>
+      <div class="panel-body <c:if test="${contextRelativeUrl =='userInfoList2'}">a_checked</c:if>">
         <a href="userInfoList2?pageNum=1">第三页</a> 
       </div>
     </div>
