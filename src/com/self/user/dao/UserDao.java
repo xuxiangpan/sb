@@ -9,5 +9,6 @@ public interface UserDao {
 	
 	List<UserInfo> selectAllUserInfo(UserInfo userInfo);
 	UserInfo selectUserInfo(UserInfo userInfo);
+	int deleteUserInfo(String user_id);
 
 }

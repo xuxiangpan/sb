@@ -51,5 +51,13 @@ public class TestService {
 //		Assert.assertEquals(false, page.isHasPreviousPage());
 //		Assert.assertEquals(true, page.isHasNextPage());
 	}
+	@Test
+	public void test1() {
+		
+		ApplicationContext context = new ClassPathXmlApplicationContext(new String[] { "classpath:spring-mvc.xml" });
+		UserDao userDao = (UserDao) context.getBean("userDao");
+
+		userDao.deleteUserInfo("22");
+	}
 
 }

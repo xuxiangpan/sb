@@ -7,6 +7,7 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -21,7 +22,16 @@ public class UserAction {
 
 	@Resource
 	private UserService userService;
+	
+	
 
+	@RequestMapping("/userInfoDelete/{user_id}")
+	public String userInfoDelete(@PathVariable("user_id")String user_id) {
+		int count  = userService.deleteUserInfo(user_id);
+		System.out.println(count);
+		return "redirect:/userInfoList";
+		
+	}
 	@RequestMapping("/top")
 	public String top() {
 		return "top";
@@ -82,22 +92,7 @@ public class UserAction {
 		
 	}
 
-	@RequestMapping("/test")
-	public String test() {
-		return "test";
 
-	}
-
-	@RequestMapping("/indexJsp")
-	public String indexJsp() {
-		return "forward:/jsp/index.jsp";
-
-	}
-
-	@RequestMapping("/indexHtml")
-	public String indexHtml() {
-		return "forward:/jsp/index.html";
-	}
 
 	@RequestMapping("/index")
 	public String index() {

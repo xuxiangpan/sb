@@ -28,4 +28,9 @@ public class UserServiceImpl implements UserService {
 		return userDao.selectUserInfo(userInfo);
 	}
 
+	@Override
+	public int deleteUserInfo(String user_id) {
+		return userDao.deleteUserInfo(user_id);
+	}
+
 }

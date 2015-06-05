@@ -7,6 +7,7 @@ import com.self.util.Pager;
 
 public interface UserService {
 	UserInfo selectUserInfo(UserInfo userInfo); 
-	List<UserInfo> selectAllUserInfo(UserInfo userInfo); 
+	List<UserInfo> selectAllUserInfo(UserInfo userInfo);
+	int deleteUserInfo(String user_id); 
 
 }

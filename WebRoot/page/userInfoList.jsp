@@ -18,6 +18,11 @@
 	<![endif]-->
 <link rel="stylesheet" href="page/css/userInfoList.css">
 
+	<script type="text/javascript" src="resources/bootstrap-3.3.4-dist/js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="resources/bootstrap-3.3.4-dist/js/bootstrap.js"></script>
+	
+	
+
 <style type="text/css">
 body{
 	white-space: normal;
@@ -63,8 +68,39 @@ body{
 </style>
 
 
+<script type="text/javascript">
+	function doDelete(user_id){
+		$('#myModal').on('show.bs.modal', function (e) {
+			$("#confirmDelete").click(function(){
+				//alert('');
+				window.location.href ="userInfoDelete/"+user_id;
+			});;
+		})
+	}
+</script>
 </head>
 <body>
+
+
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" style="display: none;" id="myModal">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          <h4 class="modal-title" id="mySmallModalLabel">Small modal<a class="anchorjs-link" href="#mySmallModalLabel"><span class="anchorjs-icon"></span></a></h4>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary" id="confirmDelete">Save changes</button>
+      	</div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+
 	<jsp:include page="userTop.jsp"></jsp:include>
 	<div class="container" style="margin-top: 70px">
 		<div class="row">
@@ -91,14 +127,18 @@ body{
 							<tr>
 								<th>标识</th>
 								<th>名字</th>
+								<th>操作</th>
 							</tr>
 						</thead>
 						<tbody>
 
 							<c:forEach items="${page.list }" var="userInfo">
 								<tr>
-									<td>${userInfo.user_id }</td>
+									<td>${userInfo.user_id}</td>
 									<td>${userInfo.user_name }</td>
+									<td><a data-toggle="modal" onclick="doDelete(${userInfo.user_id})"  data-target="#myModal" href="#">Click me</a>
+									
+									</td>
 								</tr>
 							</c:forEach>
 						</tbody>
@@ -113,7 +153,5 @@ body{
 			</div>
 		</div>
 	</div>
-	<script type="text/javascript" src="resources/bootstrap-3.3.4-dist/js/jquery-1.11.3.min.js"></script>
-	<script type="text/javascript" src="resources/bootstrap-3.3.4-dist/js/bootstrap.js"></script>
 </body>
 </html>
