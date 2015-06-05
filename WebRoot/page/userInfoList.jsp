@@ -9,8 +9,6 @@
 <title>用户中心</title>
 <link rel="stylesheet" href="resources/bootstrap-3.3.4-dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="resources/font-awesome-4.3.0/css/font-awesome.css">
-
-
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
 	  <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
