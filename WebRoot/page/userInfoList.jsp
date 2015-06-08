@@ -18,6 +18,7 @@
 
 	<script type="text/javascript" src="resources/bootstrap-3.3.4-dist/js/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="resources/bootstrap-3.3.4-dist/js/bootstrap.js"></script>
+	<script type="text/javascript" src="resources/jquery-scrollUp/jquery.scrollUp.min.js"></script>
 	
 	
 
@@ -62,6 +63,14 @@ body{
 .a_checked {
 	background-color: #E4E7EA;
 }
+/* Image style */
+#scrollUp {
+    background-image: url("./resources/images/top.png");
+    bottom: 20px;
+    right: 20px;
+    width: 38px;    /* Width of image */
+    height: 38px;   /* Height of image */
+}
 
 </style>
 
@@ -75,6 +84,20 @@ body{
 			});;
 		})
 	}
+	
+	$(function () {
+	    $.scrollUp({
+	        scrollName: 'scrollUp', // Element ID
+	        topDistance: '300', // Distance from top before showing element (px)
+	        topSpeed: 300, // Speed back to top (ms)
+	        animation: 'fade', // Fade, slide, none
+	        animationInSpeed: 200, // Animation in speed (ms)
+	        animationOutSpeed: 200, // Animation out speed (ms)
+	        scrollText: '', // Text for element
+	        activeOverlay: false // Set CSS color to display scrollUp active point, e.g '#00FFFF'
+	    });
+	 
+	});
 </script>
 </head>
 <body>
@@ -151,5 +174,7 @@ body{
 			</div>
 		</div>
 	</div>
+	
+	
 </body>
 </html>

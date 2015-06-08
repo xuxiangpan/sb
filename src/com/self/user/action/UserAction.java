@@ -57,7 +57,7 @@ public class UserAction {
 
 		UserInfo info = new UserInfo();
 
-		PageHelper.startPage(null == pageNum ? 1 : pageNum, 3);
+		PageHelper.startPage(null == pageNum ? 1 : pageNum, 20);
 		List<UserInfo> list = userService.selectAllUserInfo(info);
 
 		PageInfo<UserInfo> page = new PageInfo<UserInfo>(list);
