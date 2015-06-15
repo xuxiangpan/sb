@@ -4,8 +4,10 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Insert title here</title>
-	<link rel="stylesheet" href="resources/bootstrap-3.3.4-dist/css/bootstrap.min.css">
+	<title>UserInfo html</title>
+	<link rel="stylesheet" href="../resources/bootstrap-3.3.4-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../resources/font-awesome-4.3.0/css/font-awesome.css">
+	<link rel="stylesheet" href="css/userInfoList.css">
 	
 	
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -14,80 +16,131 @@
 	  <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
 	
+	<style type="text/css">
+		
+		
+	
+		
+	</style>
 
 </head>
-<body>
-	<nav class="navbar navbar-inverse navbar-fixed-top">
+<body class="home-template">
+
+	<!-- start header -->
+	<header class="main-header" style="background-image: url(http://static.ghostchina.com/image/6/d1/fcb3879e14429d75833a461572e64.jpg)">
 		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-					aria-expanded="false" aria-controls="navbar">
-					
-					<span class="sr-only">Toggle navigation</span>	
-					<span class="icon-bar"></span>	
-					<span class="icon-bar"></span>	
-					<span class="icon-bar"></span>	
-				</button>
-				
-				<a class="navbar-brand" href="#">Project Name</a>
+			<div class="row">
+				<div class="col-sm-12">
+					<a class="branding" href="#" title="网站的主页"><img alt="这个是不是图片上的提示" src="http://static.ghostchina.com/image/b/46/4f5566c1f7bc28b3f7ac1fada8abe.png"> </a>
+				</div>
 			</div>
-			
-			
-			<div id="navbar" class="collapse navbar-collapse">
-				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Home</a></li>
-					<li><a href="#about">About</a></li>
-					<li><a href="#contact">Contact</a></li>
-				</ul>
+		</div>		
+	</header>
+	
+	<!-- end header -->
+	
+	
+	<!-- start navigation -->
+	<nav class="main-navigation">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="navbar-header">
+						<span class="nav-toggle-button collapsed" data-toggle="collapse" data-target="#main-menu">
+							<span class="sr-only">Toggle navigation</span>
+							<i class="fa fa-bars"></i>
+						</span>
+					</div>
+					
+					<div class="collapse navbar-collapse" id="main-menu">
+						<ul class="menu">
+							<li class="nav-current" role="presentation"><a href="/">首页</a></li>
+							<li  role="presentation"><a href="/">首页</a></li>
+							<li  role="presentation"><a href="/">首页</a></li>
+							<li  role="presentation"><a href="/">首页</a></li>
+							<li  role="presentation"><a href="/">首页</a></li>
+							<li  role="presentation"><a href="/">首页</a></li>
+						</ul>
+					
+					</div>
+				</div>
 			</div>
 		</div>
 	</nav>
-
-
-
-	<div class="container">
-		<table class="table table-striped table-bordered table-condensed table-hover" style="margin-top:100px">
-			<thead>
-				<tr>
-					<th>column 1</th>
-					<th>column 1</th>
-					<th>column 1</th>
-				</tr>
-			</thead>
-			
-				
-			
-			<tbody>
-				<tr>
-				<td>data1 简介： 前世，她是身经百战的特工，却被丈夫害死。穿越到古代，她成为一个被世人耻笑的痴傻王妃。前有王爷嫌弃，后有小妾暗害。从棺材里爬起后，她重生了这一回，定当活出惊世风华。管它妖魔鬼怪，害她者，定当十倍偿还！</td>
-				<td>data2</td>
-				<td>data3</td>
-				</tr>
-				<tr>
-				<td>data1</td>
-				<td>data2</td>
-				<td>data3</td>
-				</tr>
-				<tr>
-				<td>data1</td>
-				<td>data2</td>
-				<td>简介： 前世，她是身经百战的特工，却被丈夫害死。穿越到古代，她成为一个被世人耻笑的痴傻王妃。前有王爷嫌弃，后有小妾暗害。从棺材里爬起后，她重生了这一回，定当活出惊世风华。管它妖魔鬼怪，害她者，定当十倍偿还！data3</td>
-				</tr>
-				<tr>
-				<td>data1</td>
-				<td>data2</td>
-				<td>简介： 前世，她是身经百战的特工，却被丈夫害死。穿越到古代，她成为一个被世人耻笑的痴傻王妃。前有王爷嫌弃，后有小妾暗害。从棺材里爬起后，她重生了这一回，定当活出惊世风华。管它妖魔鬼怪，害她者，定当十倍偿还！data3</td>
-				</tr>
-				<tr>
-				<td>data1</td>
-				<td>data2</td>
-				<td>简介： 前世，她是身经百战的特工，却被丈夫害死。穿越到古代，她成为一个被世人耻笑的痴傻王妃。前有王爷嫌弃，后有小妾暗害。从棺材里爬起后，她重生了这一回，定当活出惊世风华。管它妖魔鬼怪，害她者，定当十倍偿还！data3</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
+	
+	
+	<!-- end navigation -->
 		
-	<script type="text/javascript" src="resources/bootstrap-3.3.4-dist/js/jquery-1.11.3.min.js"></script>
-	<script type="text/javascript" src="resources/bootstrap-3.3.4-dist/js/bootstrap.js"></script>
+		
+
+	<!-- start site's main content area -->
+	<section class="content-wrap">
+	
+		<div class="container">
+			<div class="row">
+				<main class="col-md-8 main-content">
+					<article id="85" class="post tag-about-ghost tag-release featured">
+						<div class="featured" title="推荐文章">
+							<i class="fa fa-star"></i>
+						</div>
+						
+						<div class="post-head">
+							<h1 class="post-title"><a href="#">Ghost 0.6+版本发布</a></h1>
+							<div class="post-meta">
+								<span class="author">作者：<a href="#">许XX</a></span>&bull;
+								<time class="post-date" datetime="2015年5月18日星期一凌晨3点30" title="2015年5月18日星期一凌晨3点30">2015年5月18日</time>
+							</div>
+						</div>
+						
+						<div class="post-content">
+							<p>Ghost 0.6.3 版本已经正式发布了！此版本主要修复了一些 bug 并包含了几个新特性，例如：博文预览。 Ghost 0.6.3 的主要变化 [新增] 博文预览 [新增] 带密码保护的私密博客 [新增] 为作者自定义页面模板 [增强] 登陆状态延长至 7 天 [修复] 编辑</p>
+						</div>
+					
+						<div class="post-permalink">
+							<a href="#" class="btn btn-default">阅读全文</a>
+						</div>
+						
+						<footer class="post-footer clearfix">
+							<div class="pull-left tag-list">
+								<i class="fa fa-folder-open-o"></i>
+								<a href="#">Ghost</a>，<a href="#">新版本发布</a>
+							</div>
+							
+							<div class="pull-right share"></div>
+						</footer>
+					</article>
+				</main>
+				<aside class="col-md-4 sidebar">
+				
+					<div class="widget">
+						<h4 class="title">社区</h4>
+					
+						<div class="content community">
+							<p>QQ群:3466819909</p>
+							<p><a href="#" title="title标题的内容" target="_blank" onclick="_hmt.push(['_trackEvent','big-button','click','问答社区'])"><i class="fa fa-comments"></i>问答社区</a></p>
+							<p><a href="#" title="title标题的内容" target="_blank" onclick="_hmt.push(['_trackEvent','big-button','click','问答社区'])"><i class="fa fa-weibo"></i>官方微博</a></p>
+						</div>
+					</div>
+				
+				</aside>
+			</div>
+		</div>
+		
+	</section>
+	<!-- end site's main content area -->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	<script type="text/javascript" src="../resources/bootstrap-3.3.4-dist/js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="../resources/bootstrap-3.3.4-dist/js/bootstrap.js"></script>
 </body>
 </html>

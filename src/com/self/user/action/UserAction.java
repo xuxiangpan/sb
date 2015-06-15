@@ -30,7 +30,6 @@ public class UserAction {
 		int count  = userService.deleteUserInfo(user_id);
 		System.out.println(count);
 		return "redirect:/userInfoList";
-		
 	}
 	@RequestMapping("/top")
 	public String top() {
