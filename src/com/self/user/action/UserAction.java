@@ -93,7 +93,7 @@ public class UserAction {
 
 
 
-	@RequestMapping("/index")
+	@RequestMapping(value={"/index","/"})
 	public String index() {
 		return "forward:/page/login.html";
 	}
