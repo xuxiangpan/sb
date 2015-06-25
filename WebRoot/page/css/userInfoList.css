@@ -6,6 +6,19 @@ html,body{
 	font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "WenQuanYi Micro Hei", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
 }
 
+a {
+  color: #e67e22;
+  outline: none;
+}
+a:hover {
+  color: #e67e22;
+}
+
+
+a:active, a:focus, a img {
+  outline: none;
+}
+
 .home-template .main-header{
 
 	padding-top: 62px;
@@ -173,18 +186,102 @@ html,body{
 	line-height: 36px;
 
 }
-
-
-/*
-.main-footer {
-	background: #202020;
-	padding: 35px 0 0;
-	color: #959595;
-}*/
-
 .main-footer{
 	background: #202020;
 	padding: 35px  0 0 ;
 	color: #959595;
+}
+
+.widget .title{
+	margin-top: 0;
+	padding-bottom: 7px;
+	border-bottom: 1px solid #ebebeb;
+	margin-bottom: 21px;
+	position: relative;
+}
+
+.widget .title :after{
+	content:'';
+	width:90px;
+	height:1px;
+	background: #e67e22;
+	position: absolute;
+	left: 0;
+	bottom: -1px;
+}
+
+.main-footer .widget .title{
+	color: #ffffff;
+	border-bottom: 1px  solid #303030;
 	
 }
+
+.widget .recent-post .recent-single-post {
+  border-bottom: 1px dashed #ebebeb;
+  padding-bottom: 14px;
+  margin-bottom: 14px;
+}
+.main-footer .widget .recent-post .recent-single-post {
+  border-bottom: 1px dashed #303030;
+}
+.widget .recent-post .recent-single-post .post-title:hover {
+  color: #e67e22;
+  text-decoration: none;
+}
+.main-footer .widget .recent-post .recent-single-post .post-title {
+  color: #959595;
+}
+.main-footer .widget .recent-post .recent-single-post .post-title:hover {
+  color: #e67e22;
+}
+
+
+.widget .tag-cloud a{
+	border: 1px solid #ebebeb;
+	padding: 2px 7px;
+	color: #959595;
+	line-height: 1.5em;
+	display: inline-block;
+	margin:  0 7px 7px 0;
+	-webkit-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+
+.widget .tag-cloud a:hover {
+  color: #ffffff;
+  background: #e67e22;
+  border: 1px solid #e67e22;
+  text-decoration: none;
+}
+.main-footer .widget .tag-cloud a {
+  border: 1px solid #303030;
+}
+
+.main-footer .widget .tag-cloud a:hover {
+  border: 1px solid #e67e22;
+}
+
+
+.main-footer .widget .friend-links a {
+  border: none;
+}
+
+.copyright {
+  background: #111;
+  font-size: 13px;
+  text-align: center;
+  color: #555555;
+  padding-top: 28px;
+  padding-bottom: 28px;
+  border-top: 1px solid #303030;
+}
+
+.copyright span {
+  margin: 0.5em;
+}
+
+.copyright a {
+  color: #555555;
+}
+
+
